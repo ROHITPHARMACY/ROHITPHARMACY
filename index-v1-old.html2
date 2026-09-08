@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohit Pharmacy - 🕉️ Mahadev Ki Kripa Se</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter}body{background:#f6f7f9}
+.top{background:#000;color:#fff;text-align:center;padding:7px;font-size:12px}.top b{color:#ffcc00}
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+.h-main{max-width:1200px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:19px;display:flex;gap:8px;align-items:center}.logo i{width:36px;height:36px;background:#ff6f00;color:#fff;display:grid;place-items:center;border-radius:8px}.logo small{display:block;font-size:10px;color:#ff6f00}
+.search{flex:1;max-width:480px;display:flex;gap:8px;background:#f1f3f6;padding:10px 14px;border-radius:12px;border:1px solid #e5e8ed}.search input{border:0;background:transparent;width:100%;outline:0}
+.actions{display:flex;gap:8px;align-items:center}.btn{padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+.cart-btn{background:#0e3a2f;color:#fff;position:relative}.cart-btn span{background:#ff3b30;color:#fff;font-size:11px;padding:2px 6px;border-radius:10px;position:absolute;top:-6px;right:-6px}
+.login-btn{background:#fff1e6;color:#ff6f00;border:1px solid #ffb26e}
+.hero{max-width:1200px;margin:14px auto;padding:0 16px;display:grid;grid-template-columns:1.4fr .6fr;gap:14px}
+.h-left{background:linear-gradient(105deg,#0e3a2f,#1e7a5a);color:#fff;border-radius:18px;padding:22px}.h-left h1{font-size:26px}.h-left h1 b{color:#ffcc33}
+.tag{display:inline-block;background:#fff3cd;color:#664d00;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;margin-top:10px;border:1px solid #ffe69c}
+.h-right{background:#fff;border-radius:18px;padding:16px;border:1px solid #e5e8ed;font-size:13px;line-height:2}
+.grid{max-width:1200px;margin:0 auto;padding:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px}
+.card{background:#fff;border:1px solid #e9ecf0;border-radius:16px;padding:12px;position:relative}.off{position:absolute;top:8px;left:8px;background:#ff3b30;color:#fff;font-size:10px;font-weight:800;padding:3px 7px;border-radius:20px}
+.card h4{font-size:13px;margin:10px 0;height:34px;overflow:hidden}.mrp{font-size:11px;color:#888;text-decoration:line-through}.price{font-weight:800}
+.add{width:100%;margin-top:8px;background:#fff;border:1.5px solid #ff6f00;color:#ff6f00;padding:8px;border-radius:10px;font-weight:800;cursor:pointer}.add.active{background:#ff6f00;color:#fff}
+#cartDrawer{position:fixed;top:0;right:-400px;width:360px;max-width:90vw;height:100%;background:#fff;z-index:200;box-shadow:-10px 0 30px rgba(0,0,0,.2);transition:.3s;padding:16px;overflow:auto}#cartDrawer.open{right:0}
+.cart-item{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding:10px 0;font-size:13px}.qty{display:flex;gap:6px;align-items:center}.qty button{width:26px;height:26px;border-radius:6px;border:1px solid #ddd}
+.footer{background:#0e0e0e;color:#aaa;text-align:center;padding:20px;font-size:12px;margin-top:20px}.footer b{color:#fff}
+#loginModal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:center;z-index:300}#loginModal.open{display:grid}.login-box{background:#fff;padding:22px;border-radius:16px;width:320px}.login-box input{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;margin:8px 0}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
+</style></head><body>
+<div class="top">🕉️ <b>Mahadev Ki Kripa Se 100% Genuine Dawiyan</b> | ⚡ Andheri-Bandra-Juhu 2Hrs Delivery</div>
+<header><div class="h-main"><div class="logo"><i>R</i><div>ROHIT PHARMACY<small>🕉️ Mahadev Ki Kripa Se</small></div></div><div class="search">🔍 <input id="search" placeholder="Search medicines..." onkeyup="searchM()"></div><div class="actions"><button class="btn login-btn" id="loginBtn" onclick="openLogin()">🔐 Login</button><button class="btn cart-btn" onclick="toggleCart()">🛒 Cart <span id="cartCount">0</span></button></div></div></header>
+<div class="hero"><div class="h-left"><h1>Andheri ki No.1<br><b>Pharmacy in 2 Hours</b></h1><div class="tag">🕉️ Aum Namah Shivaya | Mahadev Ki Kripa Se 100% Genuine - 15+ Years Trusted</div><br><a href="https://wa.me/919820270042?text=Har%20Har%20Mahadev%20Prescription%20bhejna%20hai"><button class="btn" style="background:#ff6f00;color:#fff;margin-top:14px">📤 Prescription Bhejo</button></a></div><div class="h-right"><h3>✅ Kyu Rohit Pharmacy?</h3>🕉️ Mahadev Ka Aashirwad<br>🏆 15+ Years Trusted<br>🚚 2 Hr Delivery<br>💯 Genuine<br>📞 9820270042<br><br><b id="userName">Guest User</b></div></div>
+<div class="grid" id="prodGrid"></div>
+<div id="cartDrawer"><h3>🛒 Aapka Cart 🕉️</h3><div id="cartItems" style="margin-top:12px"></div><h3 style="margin-top:16px">Total: ₹<span id="cartTotal">0</span></h3><button class="btn" style="width:100%;background:#25D366;color:#fff;margin-top:10px" onclick="checkout()">WhatsApp Pe Order Karo</button><button class="btn" style="width:100%;margin-top:8px" onclick="toggleCart()">Continue Shopping</button></div>
+<div id="loginModal"><div class="login-box"><h3>🕉️ Login - Rohit Pharmacy</h3><p style="font-size:12px;color:#666">🕉️ Aum Namah Shivaya</p><input id="custName" placeholder="Aapka Naam"><input id="custPhone" placeholder="Mobile Number"><button class="btn" style="width:100%;background:#ff6f00;color:#fff;margin-top:10px" onclick="doLogin()">Login</button><button class="btn" style="width:100%;margin-top:8px" onclick="closeLogin()">Cancel</button></div></div>
+<div class="footer"><span style="font-size:22px">🕉️</span><br><b>ROHIT PHARMACY</b><br>🕉️ Aum Namah Shivaya | Mahadev Ki Kripa Se 100% Genuine<br>Andheri West, Mumbai | 9820270042<br>Har Har Mahadev 🙏 © 2026</div>
+<script>
+let meds=[{id:1,name:"Dolo 650mg 15 Tabs",mrp:30,price:26,off:"13% OFF"},{id:2,name:"Azithral 500mg 5 Tabs",mrp:85,price:78,off:"8% OFF"},{id:3,name:"Shelcal 500mg Calcium",mrp:155,price:135,off:"12% OFF"},{id:4,name:"Limcee Vitamin C",mrp:35,price:30,off:"14% OFF"},{id:5,name:"Betadine Gargle 100ml",mrp:145,price:132,off:"9% OFF"},{id:6,name:"Volini Spray 100g",mrp:245,price:215,off:"12% OFF"},{id:7,name:"Digene Syrup 200ml",mrp:135,price:120,off:"11% OFF"},{id:8,name:"Crocin Advance 20 Tabs",mrp:32,price:28,off:"12% OFF"}];
+let cart=JSON.parse(localStorage.getItem('rp_cart')||'[]');let user=JSON.parse(localStorage.getItem('rp_user')||'null');
+function render(list){document.getElementById('prodGrid').innerHTML=list.map(m=>{let inCart=cart.find(c=>c.id===m.id);return `<div class="card"><div class="off">${m.off}</div><div style="font-size:50px;text-align:center">💊</div><h4>${m.name}</h4><div class="mrp">MRP ₹${m.mrp}</div><div class="price">₹${m.price} <small style="color:green;font-size:11px">🕉️ Genuine</small></div><button class="add ${inCart?'active':''}" onclick="addToCart(${m.id})">${inCart?`In Cart (${inCart.qty})`:'ADD +'}</button></div>`}).join('');}
+function addToCart(id){let item=cart.find(c=>c.id===id);if(item)item.qty++;else{let m=meds.find(x=>x.id===id);cart.push({...m,qty:1});}save();render(meds);openCart();}
+function save(){localStorage.setItem('rp_cart',JSON.stringify(cart));updateCartUI();}
+function updateCartUI(){let count=cart.reduce((s,c)=>s+c.qty,0);let total=cart.reduce((s,c)=>s+c.price*c.qty,0);document.getElementById('cartCount').innerText=count;document.getElementById('cartTotal').innerText=total;document.getElementById('cartItems').innerHTML=cart.length?cart.map(c=>`<div class="cart-item"><div>${c.name}<br><small>₹${c.price} x ${c.qty}</small></div><div class="qty"><button onclick="changeQty(${c.id},-1)">-</button><b>${c.qty}</b><button onclick="changeQty(${c.id},1)">+</button></div></div>`).join(''):'<p>Cart khali hai 🕉️ - Dawiyan add karo</p>';}
+function changeQty(id,d){let it=cart.find(c=>c.id===id);it.qty+=d;if(it.qty<=0)cart=cart.filter(c=>c.id!==id);save();render(meds);}
+function toggleCart(){document.getElementById('cartDrawer').classList.toggle('open');}function openCart(){document.getElementById('cartDrawer').classList.add('open');}
+function checkout(){if(!cart.length)return alert('Cart khali hai');if(!user)return openLogin();let msg=`Har Har Mahadev 🕉️ Aum Namah Shivaya%0AOrder from ${user.name} (${user.phone})%0A%0A${cart.map(c=>`${c.name} x ${c.qty} = ₹${c.price*c.qty}`).join('%0A')}%0A%0ATotal: ₹${cart.reduce((s,c)=>s+c.price*c.qty,0)}%0A%0A🕉️ Mahadev Ki Kripa Se`;window.open(`https://wa.me/919820270042?text=${msg}`,'_blank');}
+function searchM(){let q=document.getElementById('search').value.toLowerCase();render(meds.filter(m=>m.name.toLowerCase().includes(q)));}
+function openLogin(){document.getElementById('loginModal').classList.add('open');}function closeLogin(){document.getElementById('loginModal').classList.remove('open');}
+function doLogin(){let n=document.getElementById('custName').value,m=document.getElementById('custPhone').value;if(!n||!m)return alert('Naam aur number bharo');user={name:n,phone:m};localStorage.setItem('rp_user',JSON.stringify(user));updateUserUI();closeLogin();}
+function logout(){localStorage.removeItem('rp_user');user=null;updateUserUI();}
+function updateUserUI(){if(user){document.getElementById('userName').innerText=`🕉️ ${user.name}`;document.getElementById('loginBtn').innerText=`Logout (${user.name})`;document.getElementById('loginBtn').onclick=logout;}else{document.getElementById('userName').innerText='Guest User';document.getElementById('loginBtn').innerText='🔐 Login';document.getElementById('loginBtn').onclick=openLogin;}}
+updateUserUI();updateCartUI();render(meds);
+</script></body></html>
