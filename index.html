@@ -1,35 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rohit Pharmacy - Mumbai</title>
+<title>Rohit Pharmacy - Medicines in 2 Hours</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#f0f4ff;font-family:Arial}
-.header{background:#0d6efd;color:white;padding:25px;text-align:center}
-.header h1{font-size:32px}
-.hero{background:white;margin:15px;padding:25px;border-radius:20px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.1)}
-.btn{background:#25D366;color:white;padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:bold;display:inline-block;font-size:18px;margin-top:10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:15px}
-.card{background:white;padding:20px;border-radius:15px;text-align:center;font-weight:bold}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f6f7f9;color:#1a1a1a}
+.top-strip{background:#000;color:#fff;text-align:center;padding:6px;font-size:12px}
+.top-strip b{color:#ffcc00}
+header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.07);position:sticky;top:0;z-index:100}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:10px;max-width:1200px;margin:0 auto;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px}
+.logo span{width:36px;height:36px;background:#ff6f00;color:#fff;display:grid;place-items:center;border-radius:8px}
+.search-box{flex:1;max-width:500px;display:flex;background:#f1f3f6;border-radius:10px;padding:10px 14px;border:1px solid #e5e8ed}
+.search-box input{border:0;background:transparent;outline:0;width:100%;font-size:14px}
+.btn{padding:10px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+.btn-wa{background:#25D366;color:#fff}
+.btn-call{background:#fff1e6;color:#ff6f00;border:1px solid #ff6f00}
+.hero{max-width:1200px;margin:14px auto;display:grid;grid-template-columns:1.4fr .6fr;gap:14px;padding:0 16px}
+.hero-left{background:linear-gradient(105deg,#0e3a2f,#1e7a5a);color:#fff;border-radius:18px;padding:22px;display:flex;justify-content:space-between;align-items:center}
+.hero-left h1{font-size:26px} .hero-left h1 b{color:#ffcc33}
+.hero-right{background:#fff;border-radius:18px;padding:14px;border:1px solid #e5e8ed}
+.products{max-width:1200px;margin:0 auto;padding:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.card{background:#fff;border-radius:16px;border:1px solid #e9ecf0;padding:10px;position:relative}
+.card .off{position:absolute;top:8px;left:8px;background:#ff3b30;color:#fff;font-size:10px;font-weight:800;padding:3px 7px;border-radius:20px}
+.card h4{font-size:13px;margin:8px 0;height:34px;overflow:hidden}
+.card .mrp{font-size:11px;color:#888;text-decoration:line-through}
+.card .price{font-weight:800}
+.card .add{width:100%;margin-top:8px;background:#fff;border:1.5px solid #ff6f00;color:#ff6f00;padding:8px;border-radius:10px;font-weight:800;cursor:pointer}
+.wa-float{position:fixed;bottom:16px;right:16px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:28px;z-index:999;text-decoration:none}
+.footer{background:#0e0e0e;color:#aaa;padding:22px;text-align:center;margin-top:20px;font-size:12px}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="header">
-<h1>💊 ROHIT PHARMACY</h1>
-<p>Andheri West, Mumbai - 24x7</p>
+<div class="top-strip">⚡ <b>OFFER:</b> Andheri | Bandra | Juhu me 2 Ghante me Delivery - FREE above ₹499</div>
+<header>
+<div class="header-main">
+<div class="logo"><span>R</span> ROHIT PHARMACY</div>
+<div class="search-box">🔍 <input id="search" placeholder="Search Dolo, Azithral, Shelcal..." onkeyup="searchMed()"></div>
+<div><a href="tel:9820270042"><button class="btn btn-call">📞 9820270042</button></a>
+<a href="https://wa.me/919820270042?text=Hello%20Rohit%20Pharmacy"><button class="btn btn-wa">WhatsApp</button></a></div>
 </div>
+</header>
 <div class="hero">
-<h1>Medicines at Your Doorstep</h1>
-<p style="font-size:18px;margin:10px 0">Free Home Delivery in Mumbai</p>
-<a class="btn" href="https://wa.me/919820270042?text=Hello%20Rohit%20Pharmacy,%20I%20need%20medicines">📱 WhatsApp Order Now</a>
-<p style="margin-top:15px;font-size:20px;font-weight:bold">📞 9820270042</p>
+<div class="hero-left"><div><h1>Andheri ki No.1<br><b>Pharmacy in 2 Hours</b></h1><p>100% Genuine - 15+ Years Trusted</p>
+<a href="https://wa.me/919820270042?text=Prescription%20bhejna%20hai"><button style="background:#ff6f00;color:#fff;padding:12px 20px;border-radius:12px;border:0;font-weight:800">📤 Prescription Bhejo</button></a>
+</div><div style="font-size:60px">💊</div></div>
+<div class="hero-right"><h3>✅ Kyu Rohit Pharmacy?</h3><p style="font-size:12px;margin-top:10px;line-height:2">🏆 15+ Years Trusted<br>🚚 2 Hr Delivery<br>💯 100% Genuine<br>📞 9820270042</p></div>
 </div>
-<div class="grid">
-<div class="card">💊<br>All Medicines</div>
-<div class="card">🚚<br>Fast Delivery</div>
-<div class="card">👶<br>Baby Care</div>
-<div class="card">💰<br>Best Price</div>
-</div>
+<div class="products" id="prodGrid"></div>
+<div class="footer"><b>ROHIT PHARMACY</b><br>Andheri West, Mumbai 400058 | 📞 9820270042<br>© 2026 - 1MG Edition</div>
+<a class="wa-float" href="https://wa.me/919820270042?text=Hello%20Rohit%20Pharmacy">💬</a>
+<script>
+const meds=[{name:"Dolo 650mg 15 Tabs",mrp:30,price:26,off:"13% OFF"},{name:"Azithral 500mg 5 Tabs",mrp:85,price:78,off:"8% OFF"},{name:"Shelcal 500mg Calcium",mrp:155,price:135,off:"12% OFF"},{name:"Limcee Vitamin C",mrp:35,price:30,off:"14% OFF"},{name:"Betadine Gargle 100ml",mrp:145,price:132,off:"9% OFF"},{name:"Volini Spray 100g",mrp:245,price:215,off:"12% OFF"},{name:"Digene Syrup 200ml",mrp:135,price:120,off:"11% OFF"},{name:"Crocin Advance 20 Tabs",mrp:32,price:28,off:"12% OFF"}];
+function render(list){document.getElementById('prodGrid').innerHTML=list.map(m=>`<div class="card"><div class="off">${m.off}</div><div style="font-size:50px;text-align:center">💊</div><h4>${m.name}</h4><div class="mrp">MRP ₹${m.mrp}</div><div class="price">₹${m.price}</div><button class="add" onclick="order('${m.name}')">ADD +</button></div>`).join('');}
+function order(name){window.open(`https://wa.me/919820270042?text=${encodeURIComponent('Hello Rohit Pharmacy, I need '+name)}`,'_blank');}
+function searchMed(){let q=document.getElementById('search').value.toLowerCase();render(meds.filter(m=>m.name.toLowerCase().includes(q)));}
+render(meds);
+</script>
 </body>
 </html>
